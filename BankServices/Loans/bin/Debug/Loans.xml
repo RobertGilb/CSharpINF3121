@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Loans</name>
+    </assembly>
+    <members>
+        <member name="T:BankServices.Loans.LoanInfo">
+            <summary>
+            <para>Generic definition for a loan.</para>
+            <para>Can be instantiated for simple loan definitions. For more complex loans, LoanInfo will serve as base class.</para>
+            <seealso cref="T:BankServices.Loans.MortgageLoan.Mortgage"/>
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.LoanInfo.amount">
+            <summary>
+            Amount of money to be loaned
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.LoanInfo.period">
+            <summary>
+            Number of months for repayment
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.LoanInfo.interestRate">
+            <summary>
+            Annual interest rate 
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.LoanInfo.#ctor">
+            <summary>
+            <para>Initializes a new instance of LoanInfo.</para>
+            <para>Members are set to 0.</para>
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.LoanInfo.#ctor(System.Decimal)">
+            <summary>
+            Initializes a new instance of LoanInfo given the specified annual interest rate
+            </summary>
+            <param name="_interestRate">The annual interest rate</param>
+        </member>
+        <member name="M:BankServices.Loans.LoanInfo.#ctor(System.Decimal,System.Decimal,System.UInt32)">
+            <summary>
+            Initializes a new instance of LoanInfo give the specified annual interest rate, amount and repayment period in months
+            </summary>
+            <param name="_interestRate"> The annual interest rate. </param>
+            <param name="_amount">The amount to be loaned. </param>
+            <param name="_period"> The period of loan repayment. </param>
+        </member>
+        <member name="P:BankServices.Loans.LoanInfo.InterestRate">
+            <value> Gets or sets the annual interest rate (must be a number between 0 and 100).</value>
+        </member>
+        <member name="P:BankServices.Loans.LoanInfo.Amount">
+            <value> Gets or sets the amount of money to be loaned.</value>
+        </member>
+        <member name="P:BankServices.Loans.LoanInfo.Period">
+            <value> Gets or sets the period of loan repayment.</value>
+        </member>
+        <member name="T:BankServices.Loans.LoanPaymentStrategy">
+            <summary>
+            Generic definition for a repayment plan.
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.LoanPaymentStrategy.loan">
+            <summary>
+            Loan to be payed
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.LoanPaymentStrategy.#ctor(BankServices.Loans.LoanInfo)">
+            <summary>
+            Initializes a new instance of LoanPaymentStrategy given the specified LoanInfo object
+            </summary>
+            <param name="newLoan"></param>
+        </member>
+        <member name="M:BankServices.Loans.LoanPaymentStrategy.getPeriodPayment(System.UInt32)">
+            <summary>
+            Returns the amount to be payed in the specified period unit
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BankServices.Loans.LoanPaymentStrategy.getPeriodInterest(System.UInt32)">
+            <summary>
+            Returns the interest to be payed in the specified period unit.
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BankServices.Loans.LoanPaymentStrategy.getPeriodRefund(System.UInt32)">
+            <summary>
+            Returns the amount payed as load refund in the specified period unit.
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BankServices.Loans.ILoanValidator">
+            <summary>
+            Offers support for implementing additional cheking for a loan, if necessary
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.ILoanValidator.IsValid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BankServices.Loans.WindowsApplication.LoanTool">
+            <summary>
+            Summary description for LoanTool.
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.WindowsApplication.LoanTool.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.WindowsApplication.LoanTool.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.WindowsApplication.LoanTool.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.WindowsApplication.LoanTool.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.WindowsApplication.LoanTool.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:BankServices.Loans.MortgageLoan.Mortgage">
+            <summary>
+            Defines a mortgage loan
+            <code>public class Mortgage : BankServices.Loans.LoanInfo</code>
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.MortgageLoan.Mortgage.minAmount">
+            <summary>
+            The minimum amount to be loaned
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.MortgageLoan.Mortgage.maxAmount">
+            <summary>
+            The maximum amount to be loaned
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.MortgageLoan.Mortgage.minPeriod">
+            <summary>
+            The minimum repayment period
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.MortgageLoan.Mortgage.maxPeriod">
+            <summary>
+            The maximum repayment period
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.MortgageLoan.Mortgage.defaultInterestRate">
+            <summary>
+            The default interest Rate
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.MortgageLoan.Mortgage.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.MortgageLoan.Mortgage.#ctor(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="_interestRate"></param>
+        </member>
+        <member name="M:BankServices.Loans.MortgageLoan.Mortgage.#ctor(System.Decimal,System.Decimal,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="_interestRate"></param>
+            <param name="_amount"></param>
+            <param name="_period"></param>
+        </member>
+        <member name="M:BankServices.Loans.MortgageLoan.Mortgage.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BankServices.Loans.MortgageLoan.Mortgage.Amount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BankServices.Loans.MortgageLoan.Mortgage.Period">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment">
+            <summary>
+            Defines an annual series repayment plan
+            </summary>
+        </member>
+        <member name="F:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment.periodInterestRate">
+            <summary>
+            The interest rate for a period unit.
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment.#ctor(BankServices.Loans.LoanInfo)">
+            <summary>
+            Initializes a new instance of AnnualSeriesRepayment given the specified LoanInfo object
+            </summary>
+            <param name="loan"></param>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment.getPeriodRefund(System.UInt32)">
+            <summary>
+            Returns the amount payed as load refund in the specified period unit (month).
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment.getPeriodInterest(System.UInt32)">
+            <summary>
+            Returns the interest to be payed in the specified period unit(month).
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment.getPeriodPayment(System.UInt32)">
+            <summary>
+            Returns the amount to be payed in the specified period unit(month).
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.AnnualSeriesRepayment.getLeftAmount(System.UInt32)">
+            <summary>
+            Returns the amount left to be payed in the specified period unit (month).
+            </summary>
+            <param name="periodUnit"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BankServices.Loans.AnnualSeries.VisualAnnualSeriesRepayment">
+            <summary>
+            Defines an annual series repayment plan.
+            Same as AnnualSeriesRepament class with an extra public method which will ease displaying
+            the repayment plan in a ListView control
+            </summary>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.VisualAnnualSeriesRepayment.#ctor(BankServices.Loans.LoanInfo)">
+            <summary>
+            Creates a new instance of VisualAnnualSeriesRepayment given the specified LoanInfo object
+            </summary>
+            <param name="loan"></param>
+        </member>
+        <member name="M:BankServices.Loans.AnnualSeries.VisualAnnualSeriesRepayment.getListViewItemPayment">
+            <summary>
+            Returns an array of System.Windows.Fors.ListViewItem objects.
+            Each ListViewItem object has 4 subitems defined: the left amount to be payed, monthly
+            loan refund, monthly interest and the total amount to be payed
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

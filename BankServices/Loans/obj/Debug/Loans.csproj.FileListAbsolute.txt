@@ -1,0 +1,9 @@
+d:\Development\Visual Studio\Projects\BankServices\Loans\obj\Debug\Loans.exe
+d:\Development\Visual Studio\Projects\BankServices\Loans\obj\Debug\Loans.pdb
+d:\Development\Visual Studio\Projects\BankServices\Loans\bin\Debug\Loans.exe
+d:\Development\Visual Studio\Projects\BankServices\Loans\bin\Debug\Loans.pdb
+d:\Development\Visual Studio\Projects\BankServices\Loans\bin\Debug\Loans.xml
+d:\Development\Visual Studio\Projects\BankServices\Loans\obj\Debug\Loans.csprojResolveAssemblyReference.cache
+d:\Development\Visual Studio\Projects\BankServices\Loans\obj\Debug\BankServices.Loans.WindowsApplication.LoanTool.resources
+d:\Development\Visual Studio\Projects\BankServices\Loans\obj\Debug\Loans.csproj.GenerateResource.Cache
+d:\Development\Visual Studio\Projects\BankServices\Loans\bin\Debug\Loans.exe.config

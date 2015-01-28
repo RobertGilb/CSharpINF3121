@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisioDocument>
+	<DocumentProperties>
+		<Title>UML Diagram</Title>
+		<HyperlinkBase href=""></HyperlinkBase>
+	</DocumentProperties>
+	<Pages>
+		<Page ID="0" Name="BankServices.Loans" NameU="Static Structure-1">
+			<Shapes>
+				<Shape ID="1" UniqueID="{A8EF8BF9-1224-49CE-850E-3244348A6BBB}" Name="Sheet.1" NameU="Sheet.1">
+					<XForm>
+						<PinX Unit="MM">-1.771653543307087</PinX>
+						<PinY Unit="MM">1.771653543307087</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="3" UniqueID="{6A972900-E3C5-462F-91D3-6A81745E770E}" Name="Watermark Title" NameU="Watermark Title" Master="18">
+					<Text>Static Structure</Text>
+					<XForm>
+						<PinX Unit="MM">0.000000000000000</PinX>
+						<PinY Unit="MM">11.692913385826772</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="4" UniqueID="{157BF6E9-28AB-4986-BE7F-0CC92620469D}" Name="Interface" NameU="Interface" Master="23">
+					<Text>«interface»ILoanValidator</Text>
+					<XForm>
+						<PinX Unit="MM">1.377952755905512</PinX>
+						<PinY Unit="MM">10.817913385826770</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="2" UniqueID="{02CB4ADB-EAD6-43B7-90C4-5AB817F5B162}" Name="Class" NameU="Class" Master="24">
+					<XForm>
+						<PinX Unit="MM">2.297374714637591</PinX>
+						<PinY Unit="MM">9.114300495292548</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="11" UniqueID="{A44F8344-7DD3-4043-9448-3935199F7011}" Name="Operations" NameU="Operations">
+					<Text>+LoanInfo()
++LoanInfo(in _interestRate : decimal)
++LoanInfo(in _interestRate : decimal, in _amount : decimal, in _period : uint)
++InterestRate() : decimal
++Amount() : decimal
++Period() : uint</Text>
+					<XForm>
+						<PinX Unit="MM">2.297374714637591</PinX>
+						<PinY Unit="MM">8.799993668555711</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="12" UniqueID="{E5FA36E4-5285-45A5-8F86-2086E8DB87FB}" Name="Attributes" NameU="Attributes">
+					<Text>#amount : decimal
+#period : uint
+#interestRate : decimal</Text>
+					<XForm>
+						<PinX Unit="MM">2.297374714637591</PinX>
+						<PinY Unit="MM">9.427819157515129</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="13" UniqueID="{5E7C8EDB-7E96-41B0-99C3-20C0A18D99D3}" Name="Name" NameU="Name">
+					<Text>LoanInfo</Text>
+					<XForm>
+						<PinX Unit="MM">2.297374714637591</PinX>
+						<PinY Unit="MM">9.742125984251967</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="15" UniqueID="{9E0675A5-14D2-4768-9EC9-D9BACB684DD2}" Name="Class.15" NameU="Class.15" Master="24">
+					<XForm>
+						<PinX Unit="MM">6.266480502740829</PinX>
+						<PinY Unit="MM">9.370078740157480</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="20" UniqueID="{6C6C3E01-D1ED-48C5-8F4D-A5AC3AD0C077}" Name="Operations" NameU="Operations">
+					<Text>+LoanPaymentStrategy(in newLoan : LoanInfo)
++getPeriodPayment(in periodUnit : uint) : decimal
++getPeriodInterest(in periodUnit : uint) : decimal
++getPeriodRefund(in periodUnit : uint) : decimal</Text>
+					<XForm>
+						<PinX Unit="MM">6.266480502740828</PinX>
+						<PinY Unit="MM">9.182086614173228</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="21" UniqueID="{CB6E23B0-CAAC-4F80-BC6A-856ECAA4C036}" Name="Attributes" NameU="Attributes">
+					<Text>+loan : LoanInfo</Text>
+					<XForm>
+						<PinX Unit="MM">6.266480502740828</PinX>
+						<PinY Unit="MM">9.550264577673030</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="22" UniqueID="{27D48B8B-782C-48E6-B056-ADE08604DC19}" Name="Name" NameU="Name">
+					<Text>LoanPaymentStrategy</Text>
+					<XForm>
+						<PinX Unit="MM">6.266480502740828</PinX>
+						<PinY Unit="MM">9.738256703657282</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="24" UniqueID="{35487AEF-AEAE-4898-9D72-4B30144744BE}" Name="Class.24" NameU="Class.24" Master="24">
+					<XForm>
+						<PinX Unit="MM">6.273118485796619</PinX>
+						<PinY Unit="MM">7.362204724409448</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="29" UniqueID="{4291B04D-1639-4532-80C8-4492A7C3B557}" Name="Operations" NameU="Operations">
+					<Text>+getPeriodPayment(in periodUnit : uint) : decimal
++getPeriodInterest(in periodUnit : uint) : decimal
++getPeriodRefund(in periodUnit : uint) : decimal
++AnnualSeriesRepayment(in loan : LoanInfo)
++getLeftAmount(in periodUnit : uint) : decimal</Text>
+					<XForm>
+						<PinX Unit="MM">6.273118485796619</PinX>
+						<PinY Unit="MM">7.174212598425196</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="30" UniqueID="{49DCAA27-F8C8-4B45-9F76-8B28CA5EAA2C}" Name="Attributes" NameU="Attributes">
+					<Text>#periodInterestRate : decimal</Text>
+					<XForm>
+						<PinX Unit="MM">6.273118485796619</PinX>
+						<PinY Unit="MM">7.609056974278514</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="31" UniqueID="{E0CDEA67-D272-4EBD-B3B3-460429797F83}" Name="Name" NameU="Name">
+					<Text>AnnualSeries::AnnualSeriesRepayment</Text>
+					<XForm>
+						<PinX Unit="MM">6.273118485796619</PinX>
+						<PinY Unit="MM">7.797049100262766</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="33" UniqueID="{9CEDBADB-D6EC-4C89-B2E3-B4E6C9BE020D}" Name="Generalization" NameU="Generalization" Master="25">
+					<XForm>
+						<PinX Unit="MM">6.269799494268724</PinX>
+						<PinY Unit="MM">8.399474938460221</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="35" UniqueID="{EBDC5066-FE96-40D9-8261-7A2A8D6103DC}" Name="Class.35" NameU="Class.35" Master="24">
+					<XForm>
+						<PinX Unit="MM">6.272768629998184</PinX>
+						<PinY Unit="MM">5.590551181102361</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="40" UniqueID="{A4FED1AB-153E-4D34-BF7E-0B1AEC02A3FA}" Name="Operations" NameU="Operations">
+					<Text>+VisualAnnualSeriesRepayment(in loan : LoanInfo)
++getListViewItemPayment() : ListViewItem[]</Text>
+					<XForm>
+						<PinX Unit="MM">6.272768629998184</PinX>
+						<PinY Unit="MM">5.402559055118109</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="42" UniqueID="{384FECE2-9506-4057-B8E2-FC81B904739C}" Name="Name" NameU="Name">
+					<Text>AnnualSeries::VisualAnnualSeriesRepayment</Text>
+					<XForm>
+						<PinX Unit="MM">6.272768629998184</PinX>
+						<PinY Unit="MM">5.825396319895132</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="44" UniqueID="{70514EA7-7396-4DE1-AA93-941DC04F23F1}" Name="Generalization.44" NameU="Generalization.44" Master="25">
+					<XForm>
+						<PinX Unit="MM">6.272943557897402</PinX>
+						<PinY Unit="MM">6.376378334225631</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="46" UniqueID="{A0B98D7F-C9C7-4E4C-979E-85B1FAFCDA02}" Name="Class.46" NameU="Class.46" Master="24">
+					<XForm>
+						<PinX Unit="MM">2.297993296334348</PinX>
+						<PinY Unit="MM">6.771653543307085</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="51" UniqueID="{0AAF3008-971C-44C3-9755-02F4440A3861}" Name="Operations" NameU="Operations">
+					<Text>+Amount() : decimal
++Period() : uint
++Mortgage()
++Mortgage(in _interestRate : decimal)
++Mortgage(in _interestRate : decimal, in _amount : decimal, in _period : uint)
++ToString() : string</Text>
+					<XForm>
+						<PinX Unit="MM">2.297993296334348</PinX>
+						<PinY Unit="MM">6.324013891863217</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="52" UniqueID="{34F3602C-F431-4894-862A-243BCDE26451}" Name="Attributes" NameU="Attributes">
+					<Text>#minAmount : decimal = 10000
+#maxAmount : decimal = 2000000
+#minPeriod : uint = 12
+#maxPeriod : uint = 240
+#defaultInterestRate : decimal = 3.5</Text>
+					<XForm>
+						<PinX Unit="MM">2.297993296334348</PinX>
+						<PinY Unit="MM">7.085172205529666</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="53" UniqueID="{5B718D2B-913D-474A-8CE8-3E354822E318}" Name="Name" NameU="Name">
+					<Text>MortgageLoan::Mortgage</Text>
+					<XForm>
+						<PinX Unit="MM">2.297993296334348</PinX>
+						<PinY Unit="MM">7.532811856973535</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="55" UniqueID="{B7C269F1-8FA8-4175-A50D-BB4740A4900C}" Name="Generalization.55" NameU="Generalization.55" Master="25">
+					<XForm>
+						<PinX Unit="MM">2.297684005485969</PinX>
+						<PinY Unit="MM">8.009643431653332</PinY>
+					</XForm>
+				</Shape>
+			</Shapes>
+		</Page>
+		<Page ID="4" Name="LoanTool" NameU="BankServices.Loans.WindowsApplication Static Structure">
+			<Shapes>
+				<Shape ID="1" UniqueID="{CDE7D606-3F9E-4993-B3A7-5E40B28873A5}" Name="Watermark Title" NameU="Watermark Title" Master="18">
+					<Text>Static Structure</Text>
+					<XForm>
+						<PinX Unit="MM">0.000000000000000</PinX>
+						<PinY Unit="MM">11.692913385826772</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="2" UniqueID="{949DAC57-7775-4437-8B6B-854EE0844366}" Name="Class" NameU="Class" Master="24">
+					<XForm>
+						<PinX Unit="MM">3.995933858807407</PinX>
+						<PinY Unit="MM">8.754460822643903</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="7" UniqueID="{C37617F7-5A56-451C-8829-F94902ABF593}" Name="Operations" NameU="Operations">
+					<Text>+LoanTool()
+#Dispose(in disposing : bool)
+-InitializeComponent()
+-Main()
+-AdditionalInit()
+-buttonCalculate_Click(in sender : object, in e : EventArgs)
+-textBoxAmount_Validating(in sender : object, in e : CancelEventArgs)
+-textBoxAmount_Validated(in sender : object, in e : EventArgs)
+-textBoxPeriod_Validating(in sender : object, in e : CancelEventArgs)
+-textBoxPeriod_Validated(in sender : object, in e : EventArgs)
+-getListViewItemPayments(in loanPayment : AnnualSeriesRepayment) : ListViewItem[]
+-ValidAmount(in text : string, out errMessage : string) : bool
+-ValidPeriod(in text : string, out errMessage : string) : bool</Text>
+					<XForm>
+						<PinX Unit="MM">3.995933858807407</PinX>
+						<PinY Unit="MM">7.573490635311363</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="8" UniqueID="{8922A392-A5B6-4040-9DB2-0A1340D0CE41}" Name="Attributes" NameU="Attributes">
+					<Text>-labelAmount : Label
+-labelPeriod : Label
+-textBoxAmount : TextBox
+-textBoxPeriod : TextBox
+-buttonCalculate : Button
+-listViewPayments : ListView
+-columnPaymentNumber : ColumnHeader
+-columnLeft : ColumnHeader
+-columnAmount : ColumnHeader
+-columnInterest : ColumnHeader
+-columnTotal : ColumnHeader
+-comboBoxLoanTypes : ComboBox
+-mortgage : Mortgage
+-mortgagePayment : AnnualSeriesRepayment
+-myErrorProvider : ErrorProvider
+-components : Container = null</Text>
+					<XForm>
+						<PinX Unit="MM">3.995933858807407</PinX>
+						<PinY Unit="MM">9.534644371341093</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="9" UniqueID="{1E82DD78-B7D7-49C5-9C29-026A8E6BF8BB}" Name="Name" NameU="Name">
+					<Text>WindowsApplication::LoanTool</Text>
+					<XForm>
+						<PinX Unit="MM">3.995933858807407</PinX>
+						<PinY Unit="MM">10.715614558673634</PinY>
+					</XForm>
+				</Shape>
+			</Shapes>
+		</Page>
+	</Pages>
+</VisioDocument>
